@@ -62,8 +62,35 @@ update the site — no need to touch components.
 
 ## Deploying
 
-- **Frontend**: any static host (Vercel, Netlify, Render static site) — run
-  `npm run build` and deploy the `dist/` folder.
-- **Backend**: any Node host (Render, Railway, Fly.io). Set `CLIENT_ORIGIN`
-  to your deployed frontend URL, and set `VITE_API_URL` on the frontend to
-  your deployed backend URL before building.
+### Vercel (frontend)
+
+1. Push the project to GitHub.
+2. In Vercel, import the `frontend/` folder as a project.
+3. Set the build command to `npm run build`.
+4. Set the output directory to `dist`.
+5. Add an environment variable:
+   - `VITE_API_URL=https://your-render-backend-url.onrender.com`
+6. Deploy.
+
+### Render (backend)
+
+1. Create a new Web Service on Render and connect the repository.
+2. Set the root directory to `backend`.
+3. Use these settings:
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+4. Add environment variables:
+   - `NODE_ENV=production`
+   - `CLIENT_ORIGIN=https://your-vercel-app.vercel.app`
+   - `SMTP_HOST=...` (optional)
+   - `SMTP_PORT=587` (optional)
+   - `SMTP_USER=...` (optional)
+   - `SMTP_PASS=...` (optional)
+   - `CONTACT_TO_EMAIL=your-email@example.com` (optional)
+5. Deploy.
+
+### Notes
+
+- The frontend uses `VITE_API_URL` for the deployed API URL.
+- The backend accepts requests from the Vercel domain via `CLIENT_ORIGIN`.
+- If SMTP is not configured, the contact form will still save submissions locally.

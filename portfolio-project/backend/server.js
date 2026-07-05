@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import { pathToFileURL } from 'url';
 import contactRouter from './routes/contact.js';
 
 dotenv.config();
@@ -32,6 +33,12 @@ app.use('/api', (req, res) => {
   res.status(404).json({ error: 'Not found' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Portfolio API listening on http://localhost:${PORT}`);
-});
+const isMainModule = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+
+if (isMainModule) {
+  app.listen(PORT, () => {
+    console.log(`Portfolio API listening on http://localhost:${PORT}`);
+  });
+}
+
+export { app };
