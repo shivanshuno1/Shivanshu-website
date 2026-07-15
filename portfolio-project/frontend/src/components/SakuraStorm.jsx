@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-const PETAL_COUNT = 100;
+const PETAL_COUNT = 10;
 
 function randomPetals() {
   return Array.from({ length: PETAL_COUNT }, (_, index) => {
@@ -20,7 +20,7 @@ function randomPetals() {
       vert: -10 + Math.random() * 20,
       depth: 0.85 + Math.random() * 1.15,
       direction,
-      color: isWhite ? 'rgba(255,255,255,0.98)' : 'rgba(255,123,185,0.95)',
+      color: isWhite ? 'rgba(255,255,255,0.98)' : 'rgba(255, 123, 196, 0.95)',
       highlight: isWhite ? 'rgba(255,255,255,0.98)' : 'rgba(255,224,245,0.98)',
       glowDuration: 2.2 + Math.random() * 3.4,
       glowDelay: Math.random() * 10,
@@ -62,7 +62,7 @@ export default function SakuraStorm() {
       if (nextSection && triggeredSection.current !== nextSection.id) {
         triggeredSection.current = nextSection.id;
         setWindBurst(true);
-        window.setTimeout(() => setWindBurst(false), 1100);
+        window.setTimeout(() => setWindBurst(false), 1100);  //wind speed control for the burst effect
       }
       ticking = false;
     };
