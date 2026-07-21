@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "lucide-react": "^1.25.0",
+    "pdfjs-dist": "^6.1.200",
+    "react-pageflip": "^2.0.3"
+  }
+}

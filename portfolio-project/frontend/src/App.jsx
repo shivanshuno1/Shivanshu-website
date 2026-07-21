@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SakuraStorm from './components/SakuraStorm';
 import { profile } from './data/resumeData';
+import Resume from './components/Resume';
 
 export default function App() {
   return (
@@ -87,6 +88,7 @@ export default function App() {
       <About />
       <Experience />
       <Skills />
+      <Resume />
       <Projects />
       <Certifications />
       <Contact />
