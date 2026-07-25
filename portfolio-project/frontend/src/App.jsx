@@ -50,7 +50,7 @@ export default function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-body text-lg md:text-xl text-haze mt-6 max-w-xl"
+            className="font-body text-lg md:text-xl text-blue mt-6 max-w-xl"
           >
             {profile.title} — building full-stack products and exploring what AI makes possible.
           </motion.p>
