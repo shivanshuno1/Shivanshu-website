@@ -6,7 +6,7 @@ import * as pdfjsLib from 'pdfjs-dist';
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 import { Download, Eye, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import SectionReveal from './SectionReveal';
-import resumeFile from '../assets/Shivanshu_Rawat_Resume_Formatted (1).pdf';
+import resumeFile from '../assets/Shivanshu_Rawat_Resume_OnePage (2).pdf';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
