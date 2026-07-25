@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionReveal from './SectionReveal';
 import Logo from './Logo';
-import bioPhoto from './Icons/Screenshot 2026-07-04 162709.png';
+import bioPhoto from './Icons/Shivanshu_Rawat_classy_25_july_2026_widened.jpeg';
 import { profile, education } from '../data/resumeData';
 
 export default function About() {
@@ -54,12 +54,12 @@ export default function About() {
                         </div>
 
                         {/* Image */}
-                        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-ink/40">
-                            <img
-                                src={bioPhoto}
-                                alt="Shivanshu — product-minded engineer working on AI/ML systems"
-                                className="h-[200px] sm:h-[260px] md:h-[300px] lg:h-[340px] w-full object-cover object-center"
-                                loading="lazy"
+                        <div className="h-[240px] sm:h-[300px] md:h-[340px] lg:h-[380px] w-full object-cover object-[center_25%]">
+                             <img
+                               src={bioPhoto}
+                               alt="Shivanshu — product-minded engineer working on AI/ML systems"
+                               className="h-[200px] sm:h-[260px] md:h-[300px] lg:h-[340px] w-full object-cover object-[center_35%]"
+                               loading="lazy"
                             />
                             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 sm:h-20 lg:h-24 bg-gradient-to-t from-ink/95 to-transparent" />
                         </div>
